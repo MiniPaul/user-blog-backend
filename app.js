@@ -8,7 +8,7 @@ const app=express()
 app.use(express.json())
 app.use(cors())
 
-app.use("/api/userblog",user)
+app.use("/api/userblog",userblogRouter)
 
 mongoose.connect("mongodb+srv://minipaul:minipaul@cluster0.isuura7.mongodb.net/userblogDb?retryWrites=true&w=majority", 
 {useNewUrlParser:true})
