@@ -8,9 +8,9 @@ const app=express()
 app.use(express.json())
 app.use(cors())
 
-app.use("/api/userblog",userblogRouter)
+app.use("/api/userblog",user)
 
-mongoose.connect("mongodb+srv://minipaul:minipaul@cluster0.isuura7.mongodb.net/furnitureDb?retryWrites=true&w=majority", 
+mongoose.connect("mongodb+srv://minipaul:minipaul@cluster0.isuura7.mongodb.net/userblogDb?retryWrites=true&w=majority", 
 {useNewUrlParser:true})
 
 app.listen(3001,()=>{
