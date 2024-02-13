@@ -37,6 +37,7 @@ router.post("/add",async(req,res)=>{
     })
 })
 
+
 router.post("/signin",async(req,res)=>{
     let input=req.body
     let email=req.body.email
@@ -66,7 +67,7 @@ router.post("/signin",async(req,res)=>{
     }
 
     res.json({
-        status:"success"
+        status:"success","userData":data
     })
 })
 

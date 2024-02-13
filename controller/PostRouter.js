@@ -15,9 +15,15 @@ router.post("/add",async(req,res)=>{
 
 router.get("/viewall",async(req,res)=>{
     let result=await postmodel.find()
-    .populate("userId","name age mobno address pincode email -_id ")//id and password not needed
+    .populate("userId","name age mobno address pincode email -_id ")//id 
     .exec()
     res.json(result)
+})
+
+router.post("/viewallpost",async(req,res)=>{
+    let input=req.body
+    let data=await postmodel.find(input)
+    res.json(data)
 })
 
 module.exports=router
